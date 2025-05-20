@@ -1,12 +1,8 @@
-os: linux
-language: generic
-dist: focal
-
 vm:
-  create:
-    name: my-image1
+  use:
+    name: my-image
+  size: x-large
 
 script:
-  - sudo mkdir /my-custom-dir
-  - echo "Test custom image!" | sudo tee /my-custom-dir/my_custom_file.txt
+  - echo "Checking if custom file exists"
   - sudo cat /my-custom-dir/my_custom_file.txt
