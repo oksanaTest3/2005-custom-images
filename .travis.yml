@@ -1,8 +1,8 @@
-vm:
-  use:
-    name: my-image1
-  size: large
+os: linux
+language: generic
+dist: focal
 
-script:
-  - echo "Checking if custom file exists"
-  - sudo cat /my-custom-dir/my_custom_file.txt
+vm:
+  create:
+    name: my-image2
+  size: x-large
