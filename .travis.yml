@@ -1,0 +1,12 @@
+os: linux
+language: generic
+dist: focal
+
+vm:
+  create:
+    name: my-image
+
+script:
+  - sudo mkdir /my-custom-dir
+  - echo "Test my-image!" | sudo tee /my-custom-dir/my_custom_file.txt
+  - sudo cat /my-custom-dir/my_custom_file.txt
